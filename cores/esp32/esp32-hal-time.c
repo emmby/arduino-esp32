@@ -63,6 +63,7 @@ void configTime(long gmtOffset_sec, int daylightOffset_sec, const char* server1,
 /*
  * configTzTime
  * sntp setup using TZ environment variable
+ * NOTE: this function cannot be reliably called more than once, see https://github.com/espressif/esp-idf/issues/3046
  * */
 void configTzTime(const char* tz, const char* server1, const char* server2, const char* server3)
 {
